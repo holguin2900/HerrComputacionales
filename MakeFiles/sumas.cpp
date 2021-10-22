@@ -1,4 +1,6 @@
-#include <iostream> // Este programa compara
+#include <iostream>
+#include <cmath>
+// Este programa compara
 //la suma armónica realizada de
 //dos manera diferentes
 
@@ -9,8 +11,12 @@ REAL sumdown(int N);
 
 int main(void){
 
-  std::cout <<sumup(3)<<"\n";
-  std::cout<<sumdown(3)<<"\n";
+  for (int ii = 1; ii < 1000; ++ii ){
+    REAL suma1 = sumup(ii);
+    REAL suma2 = sumup(ii);
+  
+    std::cout<<ii<<"\t"<<std::fabs(1-suma1/suma2) <<"\n";
+  }
   return 0;
 }
 
